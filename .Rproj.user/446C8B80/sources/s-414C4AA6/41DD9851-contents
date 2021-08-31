@@ -1,0 +1,74 @@
+--- 
+title: "Git and GitHub for Reproducible Science"
+author: 
+  - Simona Picardi^[Utah State University, simona.picardi@usu.edu]
+date: "2021-09-13"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+description: "Materials from workshop at University of Wyoming, hosted by Merkle lab"
+---
+
+# Overview
+
+The goal of this workshop is to teach you how to efficiently manage and share 
+your code. Code is a living, ever-changing thing, and using it efficiently 
+requires a system able to accommodate changes implemented through time and by 
+multiple users while guaranteeing long-term integrity. Version control is a 
+powerful tool to help us achieve efficient code management, and more broadly,
+reproducible research. Here, we will focus on Git and GitHub as our software of
+choice. At the end of these two days, you will be able to: 
+
+1. Optimize your directory organization;
+2. Create Git repositories for each of your research projects;
+3. Automatically keep track of changes you make in your code;
+4. Synchronize changes between collaborators on a project;
+5. Retrieve previous versions of code when necessary.
+
+The content is organized in two Chapters, articulated over two days:
+
+* Chapter \@ref(version-control-git), Version Control with Git
+* Chapter \@ref(git-hub), Collaborative Science with GitHub
+
+## Software Requirements and Installation Instructions
+
+### Git
+
+Git is a distributed version control system. It is free and open source. To
+install Git, follow instructions for your operating system below. 
+
+#### Windows
+
+Download from the Git website: go to https://git-scm.com/download/win and the 
+download will start automatically.
+
+#### Mac OS
+
+On Mavericks (10.9) or above, when you try to run a Git command from the 
+Terminal for the first time, the installation will start automatically if you 
+don't already have Git installed. Type the following in the terminal:
+
+```{bash, eval = FALSE}
+
+$ git --version
+
+```
+
+And follow the instructions on the installation wizard. 
+
+#### Linux
+
+In the command line:
+
+```{bash, eval = FALSE}
+
+$ sudo apt install git-all
+
+```
+
+### GitHub
+
+We are going to use GitHub through the web browser, so no need to install any 
+additional software. Just make sure you create a GitHub account on https://github.com/.

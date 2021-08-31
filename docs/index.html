@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Git and GitHub for Reproducible Science</title>
+  <meta name="description" content="Materials from workshop at University of Wyoming, hosted by Merkle lab" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Git and GitHub for Reproducible Science" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Materials from workshop at University of Wyoming, hosted by Merkle lab" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Git and GitHub for Reproducible Science" />
+  
+  <meta name="twitter:description" content="Materials from workshop at University of Wyoming, hosted by Merkle lab" />
+  
+
+<meta name="author" content="Simona Picardi" />
+
+
+<meta name="date" content="2021-09-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="version-control-git.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Workshop Materials</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#software-requirements-and-installation-instructions"><i class="fa fa-check"></i><b>1.1</b> Software Requirements and Installation Instructions</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#git"><i class="fa fa-check"></i><b>1.1.1</b> Git</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#github"><i class="fa fa-check"></i><b>1.1.2</b> GitHub</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="version-control-git.html"><a href="version-control-git.html"><i class="fa fa-check"></i><b>2</b> Version Control with Git</a><ul>
+<li class="chapter" data-level="2.1" data-path="version-control-git.html"><a href="version-control-git.html#directory-organization"><i class="fa fa-check"></i><b>2.1</b> Directory organization</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="version-control-git.html"><a href="version-control-git.html#overlap"><i class="fa fa-check"></i><b>2.1.1</b> Overlap</a></li>
+<li class="chapter" data-level="2.1.2" data-path="version-control-git.html"><a href="version-control-git.html#minimizing-duplication"><i class="fa fa-check"></i><b>2.1.2</b> Minimizing duplication</a></li>
+<li class="chapter" data-level="2.1.3" data-path="version-control-git.html"><a href="version-control-git.html#self-containedness"><i class="fa fa-check"></i><b>2.1.3</b> Self-containedness</a></li>
+<li class="chapter" data-level="2.1.4" data-path="version-control-git.html"><a href="version-control-git.html#tradeoffs"><i class="fa fa-check"></i><b>2.1.4</b> Tradeoffs</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="version-control-git.html"><a href="version-control-git.html#golden-rules-for-file-organization"><i class="fa fa-check"></i><b>2.2</b> Golden rules for file organization</a></li>
+<li class="chapter" data-level="2.3" data-path="version-control-git.html"><a href="version-control-git.html#relative-and-absolute-paths"><i class="fa fa-check"></i><b>2.3</b> Relative and absolute paths</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="version-control-git.html"><a href="version-control-git.html#path-separators"><i class="fa fa-check"></i><b>2.3.1</b> Path separators</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="version-control-git.html"><a href="version-control-git.html#command-line-basics"><i class="fa fa-check"></i><b>2.4</b> Command line basics</a></li>
+<li class="chapter" data-level="2.5" data-path="version-control-git.html"><a href="version-control-git.html#configuring-git"><i class="fa fa-check"></i><b>2.5</b> Configuring Git</a></li>
+<li class="chapter" data-level="2.6" data-path="version-control-git.html"><a href="version-control-git.html#getting-help"><i class="fa fa-check"></i><b>2.6</b> Getting help</a></li>
+<li class="chapter" data-level="2.7" data-path="version-control-git.html"><a href="version-control-git.html#creating-a-repository"><i class="fa fa-check"></i><b>2.7</b> Creating a repository</a></li>
+<li class="chapter" data-level="2.8" data-path="version-control-git.html"><a href="version-control-git.html#tracking-files"><i class="fa fa-check"></i><b>2.8</b> Tracking files</a></li>
+<li class="chapter" data-level="2.9" data-path="version-control-git.html"><a href="version-control-git.html#ignoring-files"><i class="fa fa-check"></i><b>2.9</b> Ignoring files</a></li>
+<li class="chapter" data-level="2.10" data-path="version-control-git.html"><a href="version-control-git.html#the-3-states"><i class="fa fa-check"></i><b>2.10</b> The 3 states</a></li>
+<li class="chapter" data-level="2.11" data-path="version-control-git.html"><a href="version-control-git.html#un-staging-files"><i class="fa fa-check"></i><b>2.11</b> Un-staging files</a></li>
+<li class="chapter" data-level="2.12" data-path="version-control-git.html"><a href="version-control-git.html#recovering-a-previous-version-of-a-file"><i class="fa fa-check"></i><b>2.12</b> Recovering a previous version of a file</a></li>
+<li class="chapter" data-level="2.13" data-path="version-control-git.html"><a href="version-control-git.html#removing-git"><i class="fa fa-check"></i><b>2.13</b> Removing Git</a></li>
+<li class="chapter" data-level="2.14" data-path="version-control-git.html"><a href="version-control-git.html#git-everyday"><i class="fa fa-check"></i><b>2.14</b> Git everyday</a></li>
+<li class="chapter" data-level="2.15" data-path="version-control-git.html"><a href="version-control-git.html#references"><i class="fa fa-check"></i><b>2.15</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="git-hub.html"><a href="git-hub.html"><i class="fa fa-check"></i><b>3</b> Collaborative Science with GitHub</a><ul>
+<li class="chapter" data-level="3.1" data-path="git-hub.html"><a href="git-hub.html#adding-a-remote-to-a-local-repository"><i class="fa fa-check"></i><b>3.1</b> Adding a remote to a local repository</a></li>
+<li class="chapter" data-level="3.2" data-path="git-hub.html"><a href="git-hub.html#pushing-to-a-remote-repository"><i class="fa fa-check"></i><b>3.2</b> Pushing to a remote repository</a></li>
+<li class="chapter" data-level="3.3" data-path="git-hub.html"><a href="git-hub.html#cloning-a-repository"><i class="fa fa-check"></i><b>3.3</b> Cloning a repository</a></li>
+<li class="chapter" data-level="3.4" data-path="git-hub.html"><a href="git-hub.html#synchronizing-changes-among-collaborators"><i class="fa fa-check"></i><b>3.4</b> Synchronizing changes among collaborators</a></li>
+<li class="chapter" data-level="3.5" data-path="git-hub.html"><a href="git-hub.html#resolving-conflicts"><i class="fa fa-check"></i><b>3.5</b> Resolving conflicts</a></li>
+<li class="chapter" data-level="3.6" data-path="git-hub.html"><a href="git-hub.html#avoiding-conflicts"><i class="fa fa-check"></i><b>3.6</b> Avoiding conflicts</a></li>
+<li class="chapter" data-level="3.7" data-path="git-hub.html"><a href="git-hub.html#working-with-branches"><i class="fa fa-check"></i><b>3.7</b> Working with branches</a></li>
+<li class="chapter" data-level="3.8" data-path="git-hub.html"><a href="git-hub.html#forking-a-repository"><i class="fa fa-check"></i><b>3.8</b> Forking a repository</a></li>
+<li class="chapter" data-level="3.9" data-path="git-hub.html"><a href="git-hub.html#pull-requests"><i class="fa fa-check"></i><b>3.9</b> Pull requests</a></li>
+<li class="chapter" data-level="3.10" data-path="version-control-git.html"><a href="version-control-git.html#references"><i class="fa fa-check"></i><b>3.10</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>4</b> Glossary</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Git and GitHub for Reproducible Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Git and GitHub for Reproducible Science</h1>
+<p class="author"><em>Simona Picardi<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></em></p>
+<p class="date"><em>2021-09-13</em></p>
+</div>
+<div id="overview" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Overview</h1>
+<p>The goal of this workshop is to teach you how to efficiently manage and share
+your code. Code is a living, ever-changing thing, and using it efficiently
+requires a system able to accommodate changes implemented through time and by
+multiple users while guaranteeing long-term integrity. Version control is a
+powerful tool to help us achieve efficient code management, and more broadly,
+reproducible research. Here, we will focus on Git and GitHub as our software of
+choice. At the end of these two days, you will be able to:</p>
+<ol style="list-style-type: decimal">
+<li>Optimize your directory organization;</li>
+<li>Create Git repositories for each of your research projects;</li>
+<li>Automatically keep track of changes you make in your code;</li>
+<li>Synchronize changes between collaborators on a project;</li>
+<li>Retrieve previous versions of code when necessary.</li>
+</ol>
+<p>The content is organized in two Chapters, articulated over two days:</p>
+<ul>
+<li>Chapter <a href="version-control-git.html#version-control-git">2</a>, Version Control with Git</li>
+<li>Chapter <a href="git-hub.html#git-hub">3</a>, Collaborative Science with GitHub</li>
+</ul>
+<div id="software-requirements-and-installation-instructions" class="section level2">
+<h2><span class="header-section-number">1.1</span> Software Requirements and Installation Instructions</h2>
+<div id="git" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Git</h3>
+<p>Git is a distributed version control system. It is free and open source. To
+install Git, follow instructions for your operating system below.</p>
+<div id="windows" class="section level4">
+<h4><span class="header-section-number">1.1.1.1</span> Windows</h4>
+<p>Download from the Git website: go to <a href="https://git-scm.com/download/win" class="uri">https://git-scm.com/download/win</a> and the
+download will start automatically.</p>
+</div>
+<div id="mac-os" class="section level4">
+<h4><span class="header-section-number">1.1.1.2</span> Mac OS</h4>
+<p>On Mavericks (10.9) or above, when you try to run a Git command from the
+Terminal for the first time, the installation will start automatically if you
+don’t already have Git installed. Type the following in the terminal:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="index.html#cb1-1"></a></span>
+<span id="cb1-2"><a href="index.html#cb1-2"></a>$ <span class="fu">git</span> --version</span></code></pre></div>
+<p>And follow the instructions on the installation wizard.</p>
+</div>
+<div id="linux" class="section level4">
+<h4><span class="header-section-number">1.1.1.3</span> Linux</h4>
+<p>In the command line:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="index.html#cb2-1"></a></span>
+<span id="cb2-2"><a href="index.html#cb2-2"></a>$ <span class="fu">sudo</span> apt install git-all</span></code></pre></div>
+</div>
+</div>
+<div id="github" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> GitHub</h3>
+<p>We are going to use GitHub through the web browser, so no need to install any
+additional software. Just make sure you create a GitHub account on <a href="https://github.com/" class="uri">https://github.com/</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Utah State University, <a href="mailto:simona.picardi@usu.edu" class="email">simona.picardi@usu.edu</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="version-control-git.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["uwyo-git-github.pdf", "uwyo-git-github.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

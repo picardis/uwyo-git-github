@@ -1,0 +1,21 @@
+# Glossary {#glossary}
+
+* **Branch**: A standalone history of commits existing on a repository.
+* **Clone**: Obtain a local copy of an existing repository.
+* **Command line**: The interface that allows us to give orders to our computer by typing commands instead of pointing and clicking. For anything that matters, shell, command line, and terminal are synonyms.
+* **Commit**: Save the current version of a file into the Git memory.
+* **Conflict**: A difference in the content of two repositories which prevents them from being synchronized.
+* **Fork**: Obtain a copy of an existing repository on your GitHub account.
+* **Hash**: Unique identifier for a commit.
+* **Local**: A file that is physically stored on your computer or a process that runs on your computer.
+* **Merge**: Integrate changes into a repository branch.
+* **Parent**: A directory that contains the current one.
+* **Pull**: Downloading changes from a remote repository to our local copy.
+* **Pull request**: Request to integrate changes from a fork into the original repository.
+* **Push**: Sending locally committed changes to a remote repository.
+* **Remote**: A version of a repository that is hosted elsewhere than your local copy, such as on a web server (like GitHub) or on a university network server.
+* **Root**: The parent directory of your file system. Sometimes the term "root" is used in a relative sense, e.g., to refer to the parent directory of a project rather than the parent directory of the whole file system.
+* **Shell**: The program that processes the commands we input in the command line. For anything that matters, shell, command line, and terminal are synonyms.
+* **Stage**: Add modified files to staging area, where they are ready to be committed.
+* **Terminal**: The window where you type commands for the computer. For anything that matters, shell, command line, and terminal are synonyms.
+* **Version control**: Any system that allows to track changes on a set of files.
